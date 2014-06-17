@@ -2,7 +2,7 @@ Summary for SmartLab smartphone dataset
 ========================================================
 
 ### Description of the study
-The original dataset^[1](1) we used is part of the _Human Activity Recognition Using Smartphones Dataset Version 1.0_ study^[2](2) done by Jorge L. Reyes-Ortiz et al. at the Non Linear Complex Systems Laboratory^[3](3) at _Universita degli Studi di Genova_.
+The original [dataset](archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) we used is part of the _Human Activity Recognition Using Smartphones Dataset Version 1.0_ [study](1) done by Jorge L. Reyes-Ortiz et al. at the [Non Linear Complex Systems Laboratory](www.smartlab.ws) at _Universita degli Studi di Genova_.
 
 ### Sampling information
 From the codebook of the original dataset:
@@ -21,10 +21,13 @@ The dataset contains 561 variables and a total of 10299 observations. The variab
 
 >Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing `fBodyAcc-XYZ`, `fBodyAccJerk-XYZ`, `fBodyGyro-XYZ`, `fBodyAccJerkMag`, `fBodyGyroMag`, `fBodyGyroJerkMag`. (Note the `f` to indicate frequency domain signals).
 
+**Anatomy of a pattern**:  
 
-$$ \text{Anatomy of a pattern: } \underbrace{\rm t}_{1} \underbrace{\rm Body}_{2} 
-\underbrace{\rm Acc}_{3} \underbrace{\rm Jerk}_{4}\text{-}\underbrace{\rm X}_{5} 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$$
+    |        |       |        |
+:--:|:------:|:-----:|:------:|:----
+`t` | `Body` | `Acc` | `Jerk` | `X`
+1   |2       |3      |4       |5
+
 
 1. time or frequency domain (t/f)
 2. body acceleration or gravitational acceleration (Body/Grav)
@@ -49,25 +52,25 @@ $$ \text{Anatomy of a pattern: } \underbrace{\rm t}_{1} \underbrace{\rm Body}_{2
 
 For each of these signals, the following set of variables (features) were estimated:
 
-Feature       | description
---------------|------------------------------
-`mean()`      | Mean value
-`std()`       | Standard deviation
-`mad()`       | Median absolute deviation 
-`max()`       | Largest value in array
-`min()`       | Smallest value in array
-`sma()`       | Signal magnitude area
-`energy()`    | Energy measure. Sum of the squares divided by the number of values. 
-`iqr()`       | Interquartile range 
-`entropy()`   | Signal entropy
-`arCoeff()`   | Autorregresion coefficients with Burg order equal to 4
+feature         | description
+:---------------|:------------------------------
+`mean()`        | Mean value
+`std()`         | Standard deviation
+`mad()`         | Median absolute deviation 
+`max()`         | Largest value in array
+`min()`         | Smallest value in array
+`sma()`         | Signal magnitude area
+`energy()`      | Energy measure. Sum of the squares divided by the number of values. 
+`iqr()`         | Interquartile range 
+`entropy()`     | Signal entropy
+`arCoeff()`     | Autorregresion coefficients with Burg order equal to 4
 `correlation()` | correlation coefficient between two signals
-`maxInds()`   | index of the frequency component with largest magnitude
-`meanFreq()`  | Weighted average of the frequency components to obtain a mean frequency
-`skewness()`  | skewness of the frequency domain signal 
-`kurtosis()`  | kurtosis of the frequency domain signal 
-`bandsEnergy()`   | Energy of a frequency interval within the 64 bins of the FFT of each window.
-`angle()`     | Angle between to vectors.
+`maxInds()`     | index of the frequency component with largest magnitude
+`meanFreq()`    | Weighted average of the frequency components to obtain a mean frequency
+`skewness()`    | skewness of the frequency domain signal 
+`kurtosis()`    | kurtosis of the frequency domain signal 
+`bandsEnergy()` | Energy of a frequency interval within the 64 bins of the FFT of each window.
+`angle()`       | Angle between to vectors.
 
 ### Structure and details of the summary dataset
 
@@ -77,8 +80,4 @@ The dataset is provided in `.csv` format.
 
 ______
 
-[1] archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-
-[2] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
-
-[3] www.smartlab.ws
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
